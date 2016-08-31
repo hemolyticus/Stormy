@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         String apiKey="365a313be6edbcb984a3a0613cd11ec5";
-        double latitude =37.8267;
-        double longitude = -122.423;
+        double latitude =-41.28664;
+        double longitude = 174.7757;
         String forecastUrl="https://api.forecast.io/forecast/" + apiKey +"/" + latitude + "," + longitude;
           if (isNetworkAvailable()) {
         OkHttpClient client =new OkHttpClient();

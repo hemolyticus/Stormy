@@ -51,7 +51,7 @@ public class CurrentWeather {
             iconId = R.drawable.cloudy_night;
         }
 
-        return icon;
+        return iconId;
     }
     public String getmTimeZone() {
         return mTimeZone;
