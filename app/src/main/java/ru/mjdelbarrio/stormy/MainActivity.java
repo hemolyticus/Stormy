@@ -76,7 +76,18 @@ public class MainActivity extends AppCompatActivity {
         JSONObject forecast =new JSONObject(jsonData);
         String timeZone = forecast.getString("timezone");
        Log.i(TAG, "From JSON: " + timeZone);
-        return new CurrentWeather();
+
+        JSONObject currently =forecast.getJSONObject("currently");
+        CurrentWeather currentWeather =new CurrentWeather();
+        currentWeather.setmHumidity(currently.getDouble("humidity"));
+        currentWeather.setmTime(currently.getLong("time"));
+        currentWeather.setmIcon(currently.getString("icon"));
+        currentWeather.setmPrecipChance(currently.getDouble("precipProbability"));
+        currentWeather.setmSummary(currently.getString("summary"));
+        currentWeather.setmTemperature(currently.getDouble("temperature"));
+        currentWeather.setmTimeZone(timeZone);
+        Log.d(TAG,currentWeather.getFormattedTime());
+        return currentWeather;
     }
 
     private boolean isNetworkAvailable() {
