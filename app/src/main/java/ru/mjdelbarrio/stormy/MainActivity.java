@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void updateDisplay() {
         mTemperatureLabel.setText(mCurrentWeather.getmTemperature() + "");
-        mTimeLabel.setText("At " + mCurrentWeather.getFormattedTime() + " it will be ");
+        mTimeLabel.setText("It is now " + mCurrentWeather.getFormattedTime() + " and the current temperature is ");
         mHumidityValue.setText(mCurrentWeather.getmHumidity() + "");
         mPrecipValue.setText(mCurrentWeather.getmPrecipChance() + "%");
         mSummaryLabel.setText(mCurrentWeather.getmSummary());

@@ -48,16 +48,15 @@
         android:text="Wellington, NZ"
         android:id="@+id/lblLocation"
         android:textColor="#ffffff"
-        android:textSize="75sp"
+        android:textSize="24sp"
         android:textIsSelectable="false"
-        android:layout_marginTop="200dp"
-        android:layout_below="@+id/imgViewRefresh"
-        android:layout_alignLeft="@+id/lblTemperature"
-        android:layout_alignStart="@+id/lblTemperature" />
+        android:layout_above="@+id/lblTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="43dp" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:id="@+id/imgViewIcon"
         android:layout_alignBottom="@+id/lblLocation"
         android:layout_alignParentLeft="true"
